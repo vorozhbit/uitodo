@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "UIRegular";
+    src: 
+        url("assets/fonts/UI_Sans_v8_Regular.otf") format("opentype"),
+        url("assets/fonts/UI_Sans_v8_Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "UIBold";
+    src: 
+        url("assets/fonts/UI_Sans_v8_Bold.otf") format("opentype"),
+        url("assets/fonts/UI_Sans_v8_Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+@layer base {
+    html {
+        font-family: UIRegular, Arial, sans-serif;
+        color: #000000d9;
+    }
+}

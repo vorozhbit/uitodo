@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  ui-api-db:
+    image: postgres
+    restart: on-failure
+    ports:
+      - 5432:5432
+    volumes:
+      - uidb:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: uidb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - ui-network
+networks:
+  ui-network:
+
+volumes:
+  uidb:
